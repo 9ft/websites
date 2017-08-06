@@ -1,0 +1,12 @@
+version: '2'
+services:
+  blog_test:
+    image: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/html:/usr/share/nginx/html
+      - ./log/nginx:/var/log/nginx
+
+    ports:
+      - "80:80"
